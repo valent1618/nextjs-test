@@ -1,0 +1,47 @@
+#Home {
+  .title {
+    text-align: center;
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .description {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.5rem;
+  }
+
+  .blogs-container {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 800px;
+    margin-top: 3rem;
+
+    li {
+      display: flex;
+      flex-basis: 45%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .blogs-container {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+}

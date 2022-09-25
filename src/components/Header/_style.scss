@@ -1,0 +1,16 @@
+#Header {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+
+  img {
+    border-radius: 100%;
+    transition: 0.2s;
+
+    &.reduce {
+      transform: scale(0.7);
+    }
+  }
+}
