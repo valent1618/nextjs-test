@@ -2,7 +2,7 @@
 
 ## Description
 
-Test of NextJs with blog and a counter with redux.
+Test of NextJs with blog and a redux counter.
 
 ### Demo
 
