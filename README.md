@@ -6,7 +6,7 @@ Test of NextJs with blog and a redux counter.
 
 ### Demo
 
-<https://valent1618.github.io/nextjs-test/>
+<https://nextjs-test-navy-pi.vercel.app/>
 
 ## Getting Started
 
