@@ -1,14 +1,16 @@
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
+import { useRouter } from 'next/router';
 
-export default function Layout({ children, page }) {
+export default function Layout({ children }) {
   const siteTitle = 'Create Next App';
+  const { pathname } = useRouter();
 
   return (
     <>
       <Head>
-        <title>Create Next App - {page}</title>
+        <title>NextJs</title>
         <link rel='icon' href='/favicon.ico' />
         <meta
           name='description'
@@ -23,7 +25,7 @@ export default function Layout({ children, page }) {
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-      <Header page={page} />
+      <Header />
       <main>{children}</main>
       <Footer />
     </>
