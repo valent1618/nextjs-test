@@ -1,17 +1,22 @@
 import Link from 'next/link';
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData } from '../utils/posts';
 import PostLink from '../components/PostLink';
+import { GetStaticProps } from 'next';
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
 
-export default function Home({ allPostsData }) {
+export default function Home({
+  allPostsData,
+}: {
+  allPostsData: { id: string; date: string; title: string }[];
+}) {
   return (
     <div id='Home'>
       <h1 className='title'>
@@ -19,7 +24,7 @@ export default function Home({ allPostsData }) {
       </h1>
 
       <p className='description'>
-        Get started by editing <code>pages/index.js</code>
+        Get started by editing <code>pages/index.tsx</code>
       </p>
 
       <section>

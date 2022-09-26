@@ -1,11 +1,9 @@
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-import { useRouter } from 'next/router';
 
-export default function Layout({ children }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   const siteTitle = 'Create Next App';
-  const { pathname } = useRouter();
 
   return (
     <>
