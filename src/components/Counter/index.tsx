@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import {
   increment,
   decrement,
@@ -7,8 +7,8 @@ import {
 } from '../../redux/slices/counter';
 
 export default function Counter() {
-  const dispatch = useDispatch();
-  const count = useSelector(selectValue);
+  const dispatch = useAppDispatch();
+  const count = useAppSelector(selectValue);
 
   return (
     <div className='Counter'>
